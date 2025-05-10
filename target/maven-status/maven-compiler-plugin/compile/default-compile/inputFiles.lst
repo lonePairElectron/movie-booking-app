@@ -1,1 +1,8 @@
 /Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/MovieBookingAppApplication.java
+/Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/controller/MovieController.java
+/Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/model/BookTicket.java
+/Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/model/Movie.java
+/Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/model/Show.java
+/Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/model/Theator.java
+/Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/repository/MovieRepository.java
+/Users/divakard/backend/movie-booking-app/src/main/java/com/moviebookingapp/movie_booking_app/service/MovieService.java

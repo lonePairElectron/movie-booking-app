@@ -1,14 +1,18 @@
 package com.moviebookingapp.movie_booking_app.model;
 
-import org.springframework.data.annotation.Id;
 
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Document
 public class Movie {
 
-
     @Id
-    private int movieId;
+    private String movieId;
     private String movieName;
     private String movieDescription;
-
-
 }

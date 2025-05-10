@@ -1,1 +1,8 @@
+com/moviebookingapp/movie_booking_app/model/Movie.class
+com/moviebookingapp/movie_booking_app/model/Show.class
+com/moviebookingapp/movie_booking_app/repository/MovieRepository.class
+com/moviebookingapp/movie_booking_app/controller/MovieController.class
+com/moviebookingapp/movie_booking_app/model/Theator.class
+com/moviebookingapp/movie_booking_app/service/MovieService.class
 com/moviebookingapp/movie_booking_app/MovieBookingAppApplication.class
+com/moviebookingapp/movie_booking_app/model/BookTicket.class
