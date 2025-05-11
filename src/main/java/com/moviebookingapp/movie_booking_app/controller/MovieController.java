@@ -33,12 +33,12 @@ public class MovieController {
     }
 
 
-    @PutMapping("/updatemovie/{movieId}")
+    @PutMapping("/updatemovie/{id}")
     public ResponseEntity<Movie> updateMovie(@PathVariable String id , @RequestBody Movie movie){
         return ResponseEntity.ok(movieService.updateMovie(id, movie));
     }
 
-    @DeleteMapping("/deletemovie/{movieId}")
+    @DeleteMapping("/deletemovie/{id}")
     public ResponseEntity<Void> deleteMovie(@PathVariable String id){
         movieService.deleteMovie(id);
         return ResponseEntity.ok().build();

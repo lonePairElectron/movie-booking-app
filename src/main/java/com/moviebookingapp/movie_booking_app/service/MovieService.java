@@ -31,12 +31,13 @@ public class MovieService {
             return moviesName.get();
         } else throw new RuntimeException("Movie not found");
     }
-//    public Movie updateMovie(String id, Movie movie) {
-//        Movie existingMovie = movieRepository.findById(id).orElseThrow(() -> new RuntimeException("Movie not found"));
-//        existingMovie.setName(movie.getName());
-//        existingMovie.setDescription(movie.getDescription());
-//        return movieRepository.save(existingMovie);
-//    }
+    public Movie updateMovie(String id, Movie movie) {
+        Movie existingMovie = movieRepository.findById(id).orElseThrow(() -> new RuntimeException("Movie not found"));
+        // Update the fields of the existing movie with the new values
+        existingMovie.setMovieName(movie.getMovieName());
+        existingMovie.setMovieDescription(movie.getMovieDescription());
+        return movieRepository.save(existingMovie);
+    }
     public void deleteMovie(String id) {
         Movie movie = movieRepository.findById(id).orElseThrow(() -> new RuntimeException("Movie not found"));
         movieRepository.delete(movie);
