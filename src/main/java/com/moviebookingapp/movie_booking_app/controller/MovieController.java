@@ -1,5 +1,6 @@
 package com.moviebookingapp.movie_booking_app.controller;
 
+import com.moviebookingapp.movie_booking_app.DTO.MovieDTO;
 import com.moviebookingapp.movie_booking_app.model.Movie;
 import com.moviebookingapp.movie_booking_app.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +24,8 @@ public class MovieController {
 
     @PostMapping("/addmovie")
 //    @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Movie> addMovie(@RequestBody Movie  movie){
-        return ResponseEntity.ok(movieService.createMovie(movie));
+    public ResponseEntity<Movie> addMovie(@RequestBody MovieDTO movieDTO){
+        return ResponseEntity.ok(movieService.createMovie(movieDTO));
     }
 
     @GetMapping("/moviename")
@@ -34,8 +35,8 @@ public class MovieController {
 
 
     @PutMapping("/updatemovie/{id}")
-    public ResponseEntity<Movie> updateMovie(@PathVariable String id , @RequestBody Movie movie){
-        return ResponseEntity.ok(movieService.updateMovie(id, movie));
+    public ResponseEntity<Movie> updateMovie(@PathVariable String id , @RequestBody MovieDTO movieDTO){
+        return ResponseEntity.ok(movieService.updateMovie(id, movieDTO));
     }
 
     @DeleteMapping("/deletemovie/{id}")

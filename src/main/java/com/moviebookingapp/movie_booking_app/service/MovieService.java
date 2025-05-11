@@ -1,5 +1,6 @@
 package com.moviebookingapp.movie_booking_app.service;
 
+import com.moviebookingapp.movie_booking_app.DTO.MovieDTO;
 import com.moviebookingapp.movie_booking_app.model.Movie;
 import com.moviebookingapp.movie_booking_app.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,11 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public Movie createMovie(Movie movie) {
+    public Movie createMovie(MovieDTO movieDTO) {
+        Movie movie = new Movie();
+        movie.setMovieName(movieDTO.getMovieName());
+        movie.setMovieDescription(movieDTO.getMovieDescription());
+
         return  movieRepository.save(movie);
     }
 
@@ -31,11 +36,10 @@ public class MovieService {
             return moviesName.get();
         } else throw new RuntimeException("Movie not found");
     }
-    public Movie updateMovie(String id, Movie movie) {
+    public Movie updateMovie(String id, MovieDTO movieDTO) {
         Movie existingMovie = movieRepository.findById(id).orElseThrow(() -> new RuntimeException("Movie not found"));
-        // Update the fields of the existing movie with the new values
-        existingMovie.setMovieName(movie.getMovieName());
-        existingMovie.setMovieDescription(movie.getMovieDescription());
+        existingMovie.setMovieName(movieDTO.getMovieName());
+        existingMovie.setMovieDescription(movieDTO.getMovieDescription());
         return movieRepository.save(existingMovie);
     }
     public void deleteMovie(String id) {
