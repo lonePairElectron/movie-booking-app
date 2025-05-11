@@ -1,5 +1,6 @@
 package com.moviebookingapp.movie_booking_app.service;
 
+import com.moviebookingapp.movie_booking_app.DTO.TheatorDTO;
 import com.moviebookingapp.movie_booking_app.model.Theator;
 import com.moviebookingapp.movie_booking_app.repository.TheatorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,19 @@ public class TheatorService {
     @Autowired
     public TheatorRepository theatorRepository;
 
-    public Theator addTheator(Theator theator) {
+    public Theator addTheator(TheatorDTO theatorDTO) {
+        Theator theator = new Theator();
+        theator.setTheatorName(theatorDTO.getTheatorName());
+        theator.setTheatorCapacity(theatorDTO.getTheatorCapacity());
+        theator.setTheatorLocation(theatorDTO.getTheatorLocation());
         return theatorRepository.save(theator);
     }
 
-    public Theator updateTheator(Theator theator) {
+    public Theator updateTheator(TheatorDTO theatorDTO) {
+        Theator theator = new Theator();
+        theator.setTheatorName(theatorDTO.getTheatorName());
+        theator.setTheatorCapacity(theatorDTO.getTheatorCapacity());
+        theator.setTheatorLocation(theatorDTO.getTheatorLocation());
         return theatorRepository.save(theator);
     }
     public void deleteTheator(String id) {

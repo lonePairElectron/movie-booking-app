@@ -1,6 +1,7 @@
 package com.moviebookingapp.movie_booking_app.controller;
 
 
+import com.moviebookingapp.movie_booking_app.DTO.TheatorDTO;
 import com.moviebookingapp.movie_booking_app.model.Theator;
 import com.moviebookingapp.movie_booking_app.service.TheatorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,8 @@ public class TheatorController {
     private TheatorService theatorService;
 
     @PostMapping("/addtheator")
-    public ResponseEntity<Theator> addTheator(@RequestBody Theator theator) {
-        return ResponseEntity.ok(theatorService.addTheator(theator));
+    public ResponseEntity<Theator> addTheator(@RequestBody TheatorDTO theatorDTO) {
+        return ResponseEntity.ok(theatorService.addTheator(theatorDTO));
     }
 
     @GetMapping("/getalltheatorsbylocation")
@@ -27,8 +28,8 @@ public class TheatorController {
     }
 
     @PutMapping("/updatetheator/{id}")
-    public ResponseEntity<Theator> updateTheator(@PathVariable String id,@RequestBody Theator theator) {
-        return ResponseEntity.ok(theatorService.updateTheator(theator));
+    public ResponseEntity<Theator> updateTheator(@PathVariable String id,@RequestBody TheatorDTO theatorDTO) {
+        return ResponseEntity.ok(theatorService.updateTheator(theatorDTO));
     }
 
     @DeleteMapping("/deletetheator/{id}")

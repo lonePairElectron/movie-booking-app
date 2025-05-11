@@ -1,28 +1,11 @@
-package com.moviebookingapp.movie_booking_app.model;
+package com.moviebookingapp.movie_booking_app.DTO;
 
+public class TheatorDTO {
 
-import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-
-@Data
-@Document
-public class Theator {
-
-    @Id
-    private String theatorId;
     private String theatorName;
     private Integer theatorCapacity;
     private String theatorLocation;
 
-    public String getTheatorId() {
-        return theatorId;
-    }
-
-    public void setTheatorId(String theatorId) {
-        this.theatorId = theatorId;
-    }
     public String getTheatorName() {
         return theatorName;
     }
