@@ -1,8 +1,10 @@
-com/moviebookingapp/movie_booking_app/model/Movie.class
-com/moviebookingapp/movie_booking_app/model/Show.class
-com/moviebookingapp/movie_booking_app/repository/MovieRepository.class
-com/moviebookingapp/movie_booking_app/controller/MovieController.class
-com/moviebookingapp/movie_booking_app/model/Theator.class
-com/moviebookingapp/movie_booking_app/service/MovieService.class
+com/moviebookingapp/movie_booking_app/DTO/UserDTO.class
+com/moviebookingapp/movie_booking_app/DTO/LoginDTO.class
+com/moviebookingapp/movie_booking_app/entity/Users.class
+com/moviebookingapp/movie_booking_app/JWT/JwtUtil.class
+com/moviebookingapp/movie_booking_app/config/SecurityConfig.class
+com/moviebookingapp/movie_booking_app/controller/AuthController.class
+com/moviebookingapp/movie_booking_app/JWT/JwtFilter.class
+com/moviebookingapp/movie_booking_app/repository/UserRepository.class
 com/moviebookingapp/movie_booking_app/MovieBookingAppApplication.class
-com/moviebookingapp/movie_booking_app/model/BookTicket.class
+com/moviebookingapp/movie_booking_app/service/CustomUserDetailsService.class
