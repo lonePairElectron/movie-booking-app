@@ -57,14 +57,13 @@ public class AuthController {
         user.setLastName(userDTO.getLastName());
         user.setEmail(userDTO.getEmail());
         user.setLoginId(userDTO.getLoginId());
-        user.setPassword(passwordEncoder.encode(userDTO.getPassword())); // Encrypt password
+        user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         user.setContactNumber(userDTO.getContactNumber());
-        user.getRoles().add("ROLE_USER"); // Setting role as ROLE_USER
+        user.getRoles().add("ROLE_USER");
         userRepository.save(user);
         return ResponseEntity.ok("User registered successfully!");
     }
 
-    // Endpoint for admin registration (secured so that only admins can use it)
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/register/admin")
     public ResponseEntity<String> registerAdmin(@RequestBody UserDTO userDTO) {
@@ -84,7 +83,7 @@ public class AuthController {
         admin.setLoginId(userDTO.getLoginId());
         admin.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         admin.setContactNumber(userDTO.getContactNumber());
-        admin.getRoles().add("ROLE_ADMIN"); // Setting role as ROLE_ADMIN
+        admin.getRoles().add("ROLE_ADMIN");
         userRepository.save(admin);
         return ResponseEntity.ok("Admin registered successfully!");
     }
