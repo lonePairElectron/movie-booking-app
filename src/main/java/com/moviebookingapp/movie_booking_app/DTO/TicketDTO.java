@@ -2,10 +2,15 @@ package com.moviebookingapp.movie_booking_app.DTO;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Setter
+@Getter
 public class TicketDTO {
+    // Getters and Setters
     @NotBlank(message = "Movie name cannot be blank")
     private String movieName;
 
@@ -21,31 +26,6 @@ public class TicketDTO {
         this.movieName = movieName;
         this.theatreName = theatreName;
         this.numberOfTickets = numberOfTickets;
-        this.seatNumbers = seatNumbers;
-    }
-    // Getters and Setters
-    public String getMovieName() {
-        return movieName;
-    }
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
-    }
-    public String getTheatreName() {
-        return theatreName;
-    }
-    public void setTheatreName(String theatreName) {
-        this.theatreName = theatreName;
-    }
-    public int getNumberOfTickets() {
-        return numberOfTickets;
-    }
-    public void setNumberOfTickets(int numberOfTickets) {
-        this.numberOfTickets = numberOfTickets;
-    }
-    public List<String> getSeatNumbers() {
-        return seatNumbers;
-    }
-    public void setSeatNumbers(List<String> seatNumbers) {
         this.seatNumbers = seatNumbers;
     }
 
